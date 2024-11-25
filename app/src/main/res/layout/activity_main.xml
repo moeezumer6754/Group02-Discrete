@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password Strength Checker"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your password"
+        android:inputType="textPassword" />
+
+    <ProgressBar
+        android:id="@+id/pbStrength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="100"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_marginVertical="16dp" />
+
+    <TextView
+        android:id="@+id/tvFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start typing to check strength"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cbLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="At least 8 characters"
+            android:enabled="false" />
+
+        <CheckBox
+            android:id="@+id/cbUpperCase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contains uppercase letters"
+            android:enabled="false" />
+
+        <CheckBox
+            android:id="@+id/cbNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contains numbers"
+            android:enabled="false" />
+
+        <CheckBox
+            android:id="@+id/cbSpecialChar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contains special characters"
+            android:enabled="false" />
+    </LinearLayout>
+</LinearLayout>
